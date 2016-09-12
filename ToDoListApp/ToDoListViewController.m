@@ -16,7 +16,6 @@
 
 
 
-
 @end
 
 @implementation ToDoListViewController
@@ -24,19 +23,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"To Do List";
+    self.title = @"Add To Do List";
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.tasksToCompleteLabel = [UILabel new];
     self.tasksToCompleteLabel.text = @"AddToDos";
- //   self.tasksToCompleteLabel.frame = CGRectMake(CGFloat x, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
-    self.tasksToCompleteText.keyboardType = UIKeyboardTypeAlphabet; 
+    self.tasksToCompleteLabel.frame = CGRectMake(20, 40, self.view.bounds.size.width - 40,
+                                                 60);
+    [self.view addSubview:self.tasksToCompleteLabel];
     
+    self.tasksToCompleteText.keyboardType = UIKeyboardTypeAlphabet; 
     self.tasksToCompleteText = [UITextField new];
+    self.tasksToCompleteText.frame = CGRectMake(20, 60, self.view.bounds.size.width - 40,
+                                                60);
+    [self.view addSubview:self.tasksToCompleteText];
+    
+    self.tasksListedtoCompleteLabel = [UILabel new];
+    self.tasksListedtoCompleteLabel.text = @"ToDos";
+    self.tasksListedtoCompleteLabel.frame = CGRectMake(20, 100, self.view.bounds.size.width - 40,
+                                                       60);
+    [self.view addSubview:self.tasksListedtoCompleteLabel];
+    
+    // need to add in how To Do List Items will show
 
 }
 
 
 #pragma Actions 
+
+// add in textfield change action 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

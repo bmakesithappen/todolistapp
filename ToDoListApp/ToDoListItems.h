@@ -11,7 +11,7 @@
 @interface ToDoListItems : NSObject
 
 @property (nonatomic,strong) NSString *toDo;
-@property (nonatomic,strong) NSDate *dateToDoBy;
-@property (nonatomic,strong) BOOL *isComplete;
+// @property (nonatomic,strong) NSDate *dateToComplete;
+// @property (nonatomic,strong) BOOL *isComplete;
 
 @end

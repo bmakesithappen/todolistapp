@@ -14,8 +14,8 @@
 
 @implementation ToDoListItems
 @synthesize toDo;
-@synthesize dateToDoBy;
-@synthesize isComplete;
+// @synthesize dateToDoBy;
+// @synthesize isComplete;
 
 // can I add an array with a list of ToDos here ??
 
