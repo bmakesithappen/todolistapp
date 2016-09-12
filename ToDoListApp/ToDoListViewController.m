@@ -28,8 +28,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.tasksToCompleteLabel = [UILabel new];
     self.tasksToCompleteLabel.text = @"AddToDos";
-    
-    
+ //   self.tasksToCompleteLabel.frame = CGRectMake(CGFloat x, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    self.tasksToCompleteText.keyboardType = UIKeyboardTypeAlphabet; 
     
     self.tasksToCompleteText = [UITextField new];
 
