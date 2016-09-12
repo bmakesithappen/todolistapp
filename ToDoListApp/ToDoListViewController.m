@@ -26,8 +26,12 @@
     
     self.title = @"To Do List";
     self.view.backgroundColor = [UIColor whiteColor];
-
+    self.tasksToCompleteLabel = [UILabel new];
+    self.tasksToCompleteLabel.text = @"AddToDos";
     
+    
+    
+    self.tasksToCompleteText = [UITextField new];
 
 }
 

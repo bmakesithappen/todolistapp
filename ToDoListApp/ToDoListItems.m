@@ -8,7 +8,7 @@
 
 #import "ToDoListItems.h"
 
-@interface ToDoListItems ( ) // why can this be empty again?? 
+@interface ToDoListItems ( ) // why can this be empty again??
 
 @end
 
@@ -16,6 +16,8 @@
 @synthesize toDo;
 @synthesize dateToDoBy;
 @synthesize isComplete;
+
+// can I add an array with a list of ToDos here ??
 
 
 @end
