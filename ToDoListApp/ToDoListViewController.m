@@ -7,18 +7,22 @@
 //
 
 #import "ToDoListViewController.h"
+#import "ToDoListGenerator.h"
 
-@interface ToDoListViewController ()
+@interface ToDoListViewController () <
+ UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic,strong) UILabel *tasksToCompleteLabel;
 @property (nonatomic,strong) UITextField *tasksToCompleteText;
-@property (nonatomic,strong) UILabel *tasksListedtoCompleteLabel;
-
-
+@property (nonatomic,strong) NSArray *toDos;
+@property (nonatomic,strong) UITableView *tableView;
 
 @end
 
 @implementation ToDoListViewController
+
+
+#pragma ViewLifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,21 +41,50 @@
     self.tasksToCompleteText.frame = CGRectMake(20, 60, self.view.bounds.size.width - 40,
                                                 60);
     [self.view addSubview:self.tasksToCompleteText];
-    
-    self.tasksListedtoCompleteLabel = [UILabel new];
-    self.tasksListedtoCompleteLabel.text = @"ToDos";
-    self.tasksListedtoCompleteLabel.frame = CGRectMake(20, 100, self.view.bounds.size.width - 40,
-                                                       60);
-    [self.view addSubview:self.tasksListedtoCompleteLabel];
-    
-    // need to add in how To Do List Items will show
 
+    
+    self.title = @"To Dos";
+    self.tableView = [UITableView new];
+    self.tableView.frame = CGRectMake(20, 100, self.view.bounds.size.width - 40,
+                                            60);
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"cell"];
+    [self.view addSubview:self.tableView];
+    self.toDos = [ToDoListGenerator fakeToDos];
+    
 }
+
+#pragma UITableViewDataSource
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { return self.toDos.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UITableViewCell new];
+}
+
+#pragma UITableViewDelegate
+
+/*
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.inventoryCollections[section].name;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    InventoryCollection *collection = self.inventoryCollections[indexPath.section];
+    InventoryItem *item = collection.inventoryItems[indexPath.row];
+    
+    InventoryItemViewController *viewController = [[InventoryItemViewController alloc] initWithInventoryItem:item];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+*/
 
 
 #pragma Actions 
-
-// add in textfield change action 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

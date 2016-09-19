@@ -10,8 +10,9 @@
 
 @interface ToDoListItem : NSObject
 
-@property (nonatomic,strong) NSString *toDo;
-// @property (nonatomic,strong) NSDate *dateToComplete;
-// @property (nonatomic,strong) BOOL *isComplete;
+@property (nonatomic,copy) NSString *text;
+@property (nonatomic) NSUInteger toDoId; // integers to identify each TO DO item
+@property (nonatomic,strong) NSDate *dateToComplete;
+@property (nonatomic) BOOL isComplete;  // primitive type no * , assign automatic
 
 @end

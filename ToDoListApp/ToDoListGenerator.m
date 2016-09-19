@@ -10,4 +10,16 @@
 
 @implementation ToDoListGenerator
 
++ (NSArray *) fakeToDos {
+    
+    return @[
+        @"Feed Dog",
+        @"Do Laundry",
+        @"Go to the Beach"
+    ];
+}
+
 @end
+
+
+

@@ -13,7 +13,8 @@
 		DEA368E81D86FE09003CD16B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA368E61D86FE09003CD16B /* Main.storyboard */; };
 		DEA368EA1D86FE09003CD16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA368E91D86FE09003CD16B /* Assets.xcassets */; };
 		DEA368ED1D86FE09003CD16B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA368EB1D86FE09003CD16B /* LaunchScreen.storyboard */; };
-		DEA368F71D871415003CD16B /* ToDoListItems.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA368F61D871415003CD16B /* ToDoListItems.m */; };
+		DEA368F71D871415003CD16B /* ToDoListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA368F61D871415003CD16B /* ToDoListItem.m */; };
+		DEA368FA1D874143003CD16B /* ToDoListGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA368F91D874143003CD16B /* ToDoListGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,10 @@
 		DEA368E91D86FE09003CD16B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEA368EC1D86FE09003CD16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEA368EE1D86FE09003CD16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEA368F51D871415003CD16B /* ToDoListItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListItems.h; sourceTree = "<group>"; };
-		DEA368F61D871415003CD16B /* ToDoListItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListItems.m; sourceTree = "<group>"; };
+		DEA368F51D871415003CD16B /* ToDoListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListItem.h; sourceTree = "<group>"; };
+		DEA368F61D871415003CD16B /* ToDoListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListItem.m; sourceTree = "<group>"; };
+		DEA368F81D874143003CD16B /* ToDoListGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoListGenerator.h; sourceTree = "<group>"; };
+		DEA368F91D874143003CD16B /* ToDoListGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoListGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +68,10 @@
 				DEA368E11D86FE09003CD16B /* AppDelegate.m */,
 				DEA368E31D86FE09003CD16B /* ToDoListViewController.h */,
 				DEA368E41D86FE09003CD16B /* ToDoListViewController.m */,
-				DEA368F51D871415003CD16B /* ToDoListItems.h */,
-				DEA368F61D871415003CD16B /* ToDoListItems.m */,
+				DEA368F51D871415003CD16B /* ToDoListItem.h */,
+				DEA368F61D871415003CD16B /* ToDoListItem.m */,
+				DEA368F81D874143003CD16B /* ToDoListGenerator.h */,
+				DEA368F91D874143003CD16B /* ToDoListGenerator.m */,
 				DEA368E61D86FE09003CD16B /* Main.storyboard */,
 				DEA368E91D86FE09003CD16B /* Assets.xcassets */,
 				DEA368EB1D86FE09003CD16B /* LaunchScreen.storyboard */,
@@ -155,8 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEA368E51D86FE09003CD16B /* ToDoListViewController.m in Sources */,
-				DEA368F71D871415003CD16B /* ToDoListItems.m in Sources */,
+				DEA368F71D871415003CD16B /* ToDoListItem.m in Sources */,
 				DEA368E21D86FE09003CD16B /* AppDelegate.m in Sources */,
+				DEA368FA1D874143003CD16B /* ToDoListGenerator.m in Sources */,
 				DEA368DF1D86FE09003CD16B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +310,7 @@
 				DEA368F31D86FE09003CD16B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
