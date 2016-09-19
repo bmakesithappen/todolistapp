@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ToDoListItems : NSObject
+@interface ToDoListItem : NSObject
 
 @property (nonatomic,strong) NSString *toDo;
 // @property (nonatomic,strong) NSDate *dateToComplete;

@@ -6,13 +6,13 @@
 //  Copyright © 2016 Bernard Desert. All rights reserved.
 //
 
-#import "ToDoListItems.h"
+#import "ToDoListItem.h"
 
-@interface ToDoListItems ( ) // why can this be empty again??
+@interface ToDoListItem ( ) // why can this be empty again??
 
 @end
 
-@implementation ToDoListItems
+@implementation ToDoListItem
 @synthesize toDo;
 // @synthesize dateToDoBy;
 // @synthesize isComplete;
